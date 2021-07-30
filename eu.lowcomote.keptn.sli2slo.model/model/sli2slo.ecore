@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="sli2slo" nsURI="http://eu.lowcomote/keptn/sli2slo" nsPrefix="sli2slo">
+  <eClassifiers xsi:type="ecore:EClass" name="Sli2SloLinks">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="links" upperBound="-1"
+        eType="#//Sli2SloLink" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Sli2SloLink">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sli" lowerBound="1" upperBound="-1"
+        eType="ecore:EClass ../../eu.lowcomote.keptn.sli.model/model/sliOpt.ecore#//SliRoot"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="slo" lowerBound="1" upperBound="-1"
+        eType="ecore:EClass ../../eu.lowcomote.keptn.slo.model/model/sloOpt.ecore#//SloRoot"/>
+  </eClassifiers>
+</ecore:EPackage>

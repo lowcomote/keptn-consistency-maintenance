@@ -1,0 +1,95 @@
+-- OCL contraints for /C:/Users/Benedek/Documents/git/keptn-consistency-maintenance/eu.lowcomote.keptn.slo.model/slo
+import 'http://jku.bise.at/slo'
+
+package slo
+
+	context slo::ServiceLevelObjectives 
+
+	inv ServiceLevelObjectivesRequiredcomparison ('ServiceLevelObjectives requires the property comparison'):
+	if  self.ServiceLevelObjectives->select(p|p.oclType()=slo::ServiceLevelObjectivesComparison)->size()>0
+	then true
+	else null
+	endif
+
+	context slo::ServiceLevelObjectives 
+
+	inv ServiceLevelObjectivesRequiredobjectives ('ServiceLevelObjectives requires the property objectives'):
+	if  self.ServiceLevelObjectives->select(p|p.oclType()=slo::ServiceLevelObjectivesObjectives)->size()>0
+	then true
+	else null
+	endif
+
+	context slo::ServiceLevelObjectives 
+
+	inv ServiceLevelObjectivesRequiredspec_version ('ServiceLevelObjectives requires the property spec_version'):
+	if  self.ServiceLevelObjectives->select(p|p.oclType()=slo::ServiceLevelObjectivesSpec_version)->size()>0
+	then true
+	else null
+	endif
+
+	context slo::ServiceLevelObjectives 
+
+	inv ServiceLevelObjectivesRequiredtotal_score ('ServiceLevelObjectives requires the property total_score'):
+	if  self.ServiceLevelObjectives->select(p|p.oclType()=slo::ServiceLevelObjectivesTotal_score)->size()>0
+	then true
+	else null
+	endif
+
+	context slo::Comparison 
+
+	inv ComparisonRequiredcompare_with ('Comparison requires the property compare_with'):
+	if  self.Comparison->select(p|p.oclType()=slo::ComparisonCompare_with)->size()>0
+	then true
+	else null
+	endif
+
+	context slo::Objective 
+
+	inv ObjectiveRequiredpass ('Objective requires the property pass'):
+	if  self.Objective->select(p|p.oclType()=slo::ObjectivePass)->size()>0
+	then true
+	else null
+	endif
+
+	context slo::Objective 
+
+	inv ObjectiveRequiredsli ('Objective requires the property sli'):
+	if  self.Objective->select(p|p.oclType()=slo::ObjectiveSli)->size()>0
+	then true
+	else null
+	endif
+
+	context slo::SLICriteria 
+
+	inv SLICriteriaRequiredcriteria ('SLICriteria requires the property criteria'):
+	if  self.SLICriteria->select(p|p.oclType()=slo::SLICriteriaCriteria)->size()>0
+	then true
+	else null
+	endif
+
+	context slo::Score 
+
+	inv ScoreRequiredpass ('Score requires the property pass'):
+	if  self.Score->select(p|p.oclType()=slo::ScorePass)->size()>0
+	then true
+	else null
+	endif
+
+	context slo::Score 
+
+	inv ScoreRequiredwarning ('Score requires the property warning'):
+	if  self.Score->select(p|p.oclType()=slo::ScoreWarning)->size()>0
+	then true
+	else null
+	endif
+
+	context slo::ServiceLevelObjectivesFilterPatternProperties0 
+
+	inv ServiceLevelObjectivesFilterPatternProperties0patternProperties0Regex ('the key must match the regular expression .*'):
+	if  key.matches('.*')
+	then true
+	else null
+	endif
+
+endpackage
+

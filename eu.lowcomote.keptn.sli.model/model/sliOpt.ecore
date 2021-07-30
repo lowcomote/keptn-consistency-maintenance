@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="sli" nsURI="http://jku.bise.at/sli" nsPrefix="sli">
+  <eClassifiers xsi:type="ecore:EClass" name="SliRoot">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sliRoot" lowerBound="1"
+        eType="#//ServiceLevelIndicators" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ServiceLevelIndicators">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ServiceLevelIndicators"
+        upperBound="-1" eType="#//ServiceLevelIndicatorsPropertiesAbstract" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ServiceLevelIndicatorsIndicators" eSuperTypes="#//ServiceLevelIndicatorsPropertiesAbstract">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="indicators" upperBound="-1"
+        eType="#//ServiceLevelIndicatorsIndicatorsPropertiesAbstract" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ServiceLevelIndicatorsSpec_version"
+      eSuperTypes="#//ServiceLevelIndicatorsPropertiesAbstract">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="spec_version" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ServiceLevelIndicatorsIndicatorsPatternProperties0"
+      eSuperTypes="#//ServiceLevelIndicatorsIndicatorsPropertiesAbstract">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="patternProperties0" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ServiceLevelIndicatorsPropertiesAbstract"
+      abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ServiceLevelIndicatorsIndicatorsPropertiesAbstract"
+      abstract="true"/>
+</ecore:EPackage>

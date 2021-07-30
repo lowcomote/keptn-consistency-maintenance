@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="ASCII"?>
+<trace:TraceLinkSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:trace="http://www.eclipse.org/m2m/atl/emftvm/2011/Trace" defaultSourceElements="//@rules.0/@links.0/@sourceElements.0 //@rules.1/@links.0/@sourceElements.0 //@rules.1/@links.1/@sourceElements.0 //@rules.1/@links.2/@sourceElements.0 //@rules.1/@links.3/@sourceElements.0 //@rules.1/@links.4/@sourceElements.0 //@rules.1/@links.5/@sourceElements.0 //@rules.2/@links.0/@sourceElements.0 //@rules.2/@links.1/@sourceElements.0 //@rules.2/@links.2/@sourceElements.0 //@rules.2/@links.3/@sourceElements.0 //@rules.2/@links.4/@sourceElements.0 //@rules.2/@links.5/@sourceElements.0 //@rules.2/@links.6/@sourceElements.0 //@rules.2/@links.7/@sourceElements.0 //@rules.2/@links.8/@sourceElements.0 //@rules.2/@links.9/@sourceElements.0 //@rules.2/@links.10/@sourceElements.0 //@rules.2/@links.11/@sourceElements.0 //@rules.2/@links.12/@sourceElements.0 //@rules.2/@links.13/@sourceElements.0 //@rules.2/@links.14/@sourceElements.0 //@rules.2/@links.15/@sourceElements.0 //@rules.2/@links.16/@sourceElements.0 //@rules.2/@links.17/@sourceElements.0 //@rules.3/@links.0/@sourceElements.0 //@rules.4/@links.0/@sourceElements.0 //@rules.4/@links.1/@sourceElements.0 //@rules.4/@links.2/@sourceElements.0 //@rules.4/@links.3/@sourceElements.0 //@rules.4/@links.4/@sourceElements.0 //@rules.5/@links.0/@sourceElements.0 //@rules.5/@links.1/@sourceElements.0 //@rules.5/@links.2/@sourceElements.0 //@rules.5/@links.3/@sourceElements.0 //@rules.6/@links.0/@sourceElements.0 //@rules.6/@links.1/@sourceElements.0 //@rules.6/@links.2/@sourceElements.0 //@rules.6/@links.3/@sourceElements.0 //@rules.6/@links.4/@sourceElements.0 //@rules.6/@links.5/@sourceElements.0 //@rules.7/@links.0/@sourceElements.0 //@rules.7/@links.1/@sourceElements.0 //@rules.7/@links.2/@sourceElements.0 //@rules.7/@links.3/@sourceElements.0 //@rules.7/@links.4/@sourceElements.0 //@rules.7/@links.5/@sourceElements.0 //@rules.7/@links.6/@sourceElements.0 //@rules.7/@links.7/@sourceElements.0 //@rules.7/@links.8/@sourceElements.0 //@rules.7/@links.9/@sourceElements.0 //@rules.7/@links.10/@sourceElements.0 //@rules.7/@links.11/@sourceElements.0 //@rules.7/@links.12/@sourceElements.0 //@rules.8/@links.0/@sourceElements.0">
+  <rules rule="JsonSchemaToEPackage">
+    <links>
+      <sourceElements name="jsonSchema" defaultFor="/">
+        <object href="../slo.jschema#/"/>
+      </sourceElements>
+      <targetElements name="ePackage">
+        <object href="sloOpt.ecore#/"/>
+      </targetElements>
+      <targetElements name="jsonGrammar">
+        <object href="slo.jsongrammar#/"/>
+      </targetElements>
+      <targetElements name="detailedGrammar">
+        <object href="slo.jsongrammar#//@detailedGrammar"/>
+      </targetElements>
+    </links>
+  </rules>
+  <rules rule="mapRootOrDefinitionsObjectSchemaToEClass">
+    <links>
+      <sourceElements name="objectSchema" defaultFor="/">
+        <object href="../slo.jschema#//@schema"/>
+      </sourceElements>
+      <targetElements name="eClass">
+        <object href="sloOpt.ecore#//SloRoot"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="objectSchema" defaultFor="/">
+        <object href="../slo.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.0/@value"/>
+      </sourceElements>
+      <targetElements name="eClass">
+        <object href="sloOpt.ecore#//ServiceLevelObjectives"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="objectSchema" defaultFor="/">
+        <object href="../slo.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.1/@value"/>
+      </sourceElements>
+      <targetElements name="eClass">
+        <object href="sloOpt.ecore#//Comparison"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="objectSchema" defaultFor="/">
+        <object href="../slo.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.2/@value"/>
+      </sourceElements>
+      <targetElements name="eClass">
+        <object href="sloOpt.ecore#//Objective"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="objectSchema" defaultFor="/">
+        <object href="../slo.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.3/@value"/>
+      </sourceElements>
+      <targetElements name="eClass">
+        <object href="sloOpt.ecore#//SLICriteria"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="objectSchema" defaultFor="/">
+        <object href="../slo.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.4/@value"/>
+      </sourceElements>
+      <targetElements name="eClass">
+        <object href="sloOpt.ecore#//Score"/>
+      </targetElements>
+    </links>
+  </rules>
+  <rules rule="mapInPropertiesObjectSchemaToEClass">
+    <links>
+      <sourceElements name="schema" defaultFor="/">
+        <object href="../slo.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.0/@value/@keywordDefinition.1/@keySchemaPairs.0/@value"/>
+      </sourceElements>
+      <targetElements name="eClass">
+        <object href="sloOpt.ecore#//ServiceLevelObjectivesComparison"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="schema" defaultFor="/">
+        <object href="../slo.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.0/@value/@keywordDefinition.1/@keySchemaPairs.1/@value"/>
+      </sourceElements>
+      <targetElements name="eClass">
+        <object href="sloOpt.ecore#//ServiceLevelObjectivesFilter"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="schema" defaultFor="/">
+        <object href="../slo.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.0/@value/@keywordDefinition.1/@keySchemaPairs.2/@value"/>
+      </sourceElements>
+      <targetElements name="eClass">
+        <object href="sloOpt.ecore#//ServiceLevelObjectivesObjectives"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="schema" defaultFor="/">
+        <object href="../slo.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.0/@value/@keywordDefinition.1/@keySchemaPairs.3/@value"/>
+      </sourceElements>
+      <targetElements name="eClass">
+        <object href="sloOpt.ecore#//ServiceLevelObjectivesSpec_version"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="schema" defaultFor="/">
+        <object href="../slo.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.0/@value/@keywordDefinition.1/@keySchemaPairs.4/@value"/>
+      </sourceElements>
+      <targetElements name="eClass">
+        <object href="sloOpt.ecore#//ServiceLevelObjectivesTotal_score"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="schema" defaultFor="/">
+        <object href="../slo.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.1/@value/@keywordDefinition.1/@keySchemaPairs.0/@value"/>
+      </sourceElements>
+      <targetElements name="eClass">
+        <object href="sloOpt.ecore#//ComparisonAggregate_function"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="schema" defaultFor="/">
+        <object href="../slo.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.1/@value/@keywordDefinition.1/@keySchemaPairs.1/@value"/>
+      </sourceElements>
+      <targetElements name="eClass">
+        <object href="sloOpt.ecore#//ComparisonCompare_with"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="schema" defaultFor="/">
+        <object href="../slo.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.1/@value/@keywordDefinition.1/@keySchemaPairs.2/@value"/>
+      </sourceElements>
+      <targetElements name="eClass">
+        <object href="sloOpt.ecore#//ComparisonInclude_result_with_score"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="schema" defaultFor="/">
+        <object href="../slo.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.1/@value/@keywordDefinition.1/@keySchemaPairs.3/@value"/>
+      </sourceElements>
+      <targetElements name="eClass">
+        <object href="sloOpt.ecore#//ComparisonNumber_of_comparison_results"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="schema" defaultFor="/">
+        <object href="../slo.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.2/@value/@keywordDefinition.1/@keySchemaPairs.0/@value"/>
+      </sourceElements>
+      <targetElements name="eClass">
+        <object href="sloOpt.ecore#//ObjectiveKey_sli"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="schema" defaultFor="/">
+        <object href="../slo.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.2/@value/@keywordDefinition.1/@keySchemaPairs.1/@value"/>
+      </sourceElements>
+      <targetElements name="eClass">
+        <object href="sloOpt.ecore#//ObjectivePass"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="schema" defaultFor="/">
+        <object href="../slo.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.2/@value/@keywordDefinition.1/@keySchemaPairs.2/@value"/>
+      </sourceElements>
+      <targetElements name="eClass">
+        <object href="sloOpt.ecore#//ObjectiveSli"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="schema" defaultFor="/">
+        <object href="../slo.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.2/@value/@keywordDefinition.1/@keySchemaPairs.3/@value"/>
+      </sourceElements>
+      <targetElements name="eClass">
+        <object href="sloOpt.ecore#//ObjectiveDisplayName"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="schema" defaultFor="/">
+        <object href="../slo.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.2/@value/@keywordDefinition.1/@keySchemaPairs.4/@value"/>
+      </sourceElements>
+      <targetElements name="eClass">
+        <object href="sloOpt.ecore#//ObjectiveWarning"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="schema" defaultFor="/">
+        <object href="../slo.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.2/@value/@keywordDefinition.1/@keySchemaPairs.5/@value"/>
+      </sourceElements>
+      <targetElements name="eClass">
+        <object href="sloOpt.ecore#//ObjectiveWeight"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="schema" defaultFor="/">
+        <object href="../slo.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.3/@value/@keywordDefinition.1/@keySchemaPairs.0/@value"/>
+      </sourceElements>
+      <targetElements name="eClass">
+        <object href="sloOpt.ecore#//SLICriteriaCriteria"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="schema" defaultFor="/">
+        <object href="../slo.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.4/@value/@keywordDefinition.1/@keySchemaPairs.0/@value"/>
+      </sourceElements>
+      <targetElements name="eClass">
+        <object href="sloOpt.ecore#//ScorePass"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="schema" defaultFor="/">
+        <object href="../slo.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.4/@value/@keywordDefinition.1/@keySchemaPairs.1/@value"/>
+      </sourceElements>
+      <targetElements name="eClass">
+        <object href="sloOpt.ecore#//ScoreWarning"/>
+      </targetElements>
+    </links>
+  </rules>
+  <rules rule="mapObjectSchemaInPatternPropertiesEClass">
+    <links>
+      <sourceElements name="schema" defaultFor="/">
+        <object href="../slo.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.0/@value/@keywordDefinition.1/@keySchemaPairs.1/@value/@keywordDefinition.0/@keySchemaPairs.0/@value"/>
+      </sourceElements>
+      <targetElements name="eClass">
+        <object href="sloOpt.ecore#//ServiceLevelObjectivesFilterPatternProperties0"/>
+      </targetElements>
+      <targetElements name="key">
+        <object href="sloOpt.ecore#//ServiceLevelObjectivesFilterPatternProperties0/key"/>
+      </targetElements>
+    </links>
+  </rules>
+  <rules rule="createPropertiesContainment">
+    <links>
+      <sourceElements name="typeSchemaDefinition" defaultFor="/">
+        <object href="../slo.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.0/@value/@keywordDefinition.3"/>
+      </sourceElements>
+      <targetElements name="eReference">
+        <object href="sloOpt.ecore#//ServiceLevelObjectives/ServiceLevelObjectives"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="typeSchemaDefinition" defaultFor="/">
+        <object href="../slo.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.1/@value/@keywordDefinition.3"/>
+      </sourceElements>
+      <targetElements name="eReference">
+        <object href="sloOpt.ecore#//Comparison/Comparison"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="typeSchemaDefinition" defaultFor="/">
+        <object href="../slo.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.2/@value/@keywordDefinition.3"/>
+      </sourceElements>
+      <targetElements name="eReference">
+        <object href="sloOpt.ecore#//Objective/Objective"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="typeSchemaDefinition" defaultFor="/">
+        <object href="../slo.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.3/@value/@keywordDefinition.3"/>
+      </sourceElements>
+      <targetElements name="eReference">
+        <object href="sloOpt.ecore#//SLICriteria/SLICriteria"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="typeSchemaDefinition" defaultFor="/">
+        <object href="../slo.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.4/@value/@keywordDefinition.3"/>
+      </sourceElements>
+      <targetElements name="eReference">
+        <object href="sloOpt.ecore#//Score/Score"/>
+      </targetElements>
+    </links>
+  </rules>
+  <rules rule="mapItemsObjectSchemaToEClass">
+    <links>
+      <sourceElements name="typeSchemaDefinition" defaultFor="/">
+        <object href="../slo.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.0/@value/@keywordDefinition.1/@keySchemaPairs.2/@value/@keywordDefinition.1"/>
+      </sourceElements>
+      <targetElements name="eReference">
+        <object href="sloOpt.ecore#//ServiceLevelObjectivesObjectives/objectives"/>
+      </targetElements>
+      <targetElements name="eClass">
+        <object href="sloOpt.ecore#//ServiceLevelObjectivesObjectivesItems"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="typeSchemaDefinition" defaultFor="/">
+        <object href="../slo.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.2/@value/@keywordDefinition.1/@keySchemaPairs.1/@value/@keywordDefinition.1"/>
+      </sourceElements>
+      <targetElements name="eReference">
+        <object href="sloOpt.ecore#//ObjectivePass/pass"/>
+      </targetElements>
+      <targetElements name="eClass">
+        <object href="sloOpt.ecore#//ObjectivePassItems"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="typeSchemaDefinition" defaultFor="/">
+        <object href="../slo.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.2/@value/@keywordDefinition.1/@keySchemaPairs.4/@value/@keywordDefinition.1"/>
+      </sourceElements>
+      <targetElements name="eReference">
+        <object href="sloOpt.ecore#//ObjectiveWarning/warning"/>
+      </targetElements>
+      <targetElements name="eClass">
+        <object href="sloOpt.ecore#//ObjectiveWarningItems"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="typeSchemaDefinition" defaultFor="/">
+        <object href="../slo.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.3/@value/@keywordDefinition.1/@keySchemaPairs.0/@value/@keywordDefinition.1"/>
+      </sourceElements>
+      <targetElements name="eReference">
+        <object href="sloOpt.ecore#//SLICriteriaCriteria/criteria"/>
+      </targetElements>
+      <targetElements name="eClass">
+        <object href="sloOpt.ecore#//SLICriteriaCriteriaItems"/>
+      </targetElements>
+    </links>
+  </rules>
+  <rules rule="mapRefSchemaToEReference">
+    <links>
+      <sourceElements name="refSchemaDefinition" defaultFor="/">
+        <object href="../slo.jschema#//@schema/@keywordDefinition.1"/>
+      </sourceElements>
+      <targetElements name="eReference">
+        <object href="sloOpt.ecore#//SloRoot/sloRoot"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="refSchemaDefinition" defaultFor="/">
+        <object href="../slo.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.0/@value/@keywordDefinition.1/@keySchemaPairs.0/@value/@keywordDefinition.0"/>
+      </sourceElements>
+      <targetElements name="eReference">
+        <object href="sloOpt.ecore#//ServiceLevelObjectivesComparison/comparison"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="refSchemaDefinition" defaultFor="/">
+        <object href="../slo.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.0/@value/@keywordDefinition.1/@keySchemaPairs.2/@value/@keywordDefinition.0/@itemsAnyOf1/@keywordDefinition.0"/>
+      </sourceElements>
+      <targetElements name="eReference">
+        <object href="sloOpt.ecore#//ServiceLevelObjectivesObjectivesItems/items"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="refSchemaDefinition" defaultFor="/">
+        <object href="../slo.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.0/@value/@keywordDefinition.1/@keySchemaPairs.4/@value/@keywordDefinition.0"/>
+      </sourceElements>
+      <targetElements name="eReference">
+        <object href="sloOpt.ecore#//ServiceLevelObjectivesTotal_score/total_score"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="refSchemaDefinition" defaultFor="/">
+        <object href="../slo.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.2/@value/@keywordDefinition.1/@keySchemaPairs.1/@value/@keywordDefinition.0/@itemsAnyOf1/@keywordDefinition.0"/>
+      </sourceElements>
+      <targetElements name="eReference">
+        <object href="sloOpt.ecore#//ObjectivePassItems/items"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="refSchemaDefinition" defaultFor="/">
+        <object href="../slo.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.2/@value/@keywordDefinition.1/@keySchemaPairs.4/@value/@keywordDefinition.0/@itemsAnyOf1/@keywordDefinition.0"/>
+      </sourceElements>
+      <targetElements name="eReference">
+        <object href="sloOpt.ecore#//ObjectiveWarningItems/items"/>
+      </targetElements>
+    </links>
+  </rules>
+  <rules rule="createEAttributeSimpleScalar">
+    <links>
+      <sourceElements name="typeSchemaDefinition" defaultFor="/">
+        <object href="../slo.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.0/@value/@keywordDefinition.1/@keySchemaPairs.1/@value/@keywordDefinition.0/@keySchemaPairs.0/@value/@keywordDefinition.0"/>
+      </sourceElements>
+      <targetElements name="eAttribute">
+        <object href="sloOpt.ecore#//ServiceLevelObjectivesFilterPatternProperties0/patternProperties0"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="typeSchemaDefinition" defaultFor="/">
+        <object href="../slo.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.0/@value/@keywordDefinition.1/@keySchemaPairs.3/@value/@keywordDefinition.0"/>
+      </sourceElements>
+      <targetElements name="eAttribute">
+        <object href="sloOpt.ecore#//ServiceLevelObjectivesSpec_version/spec_version"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="typeSchemaDefinition" defaultFor="/">
+        <object href="../slo.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.1/@value/@keywordDefinition.1/@keySchemaPairs.0/@value/@keywordDefinition.0"/>
+      </sourceElements>
+      <targetElements name="eAttribute">
+        <object href="sloOpt.ecore#//ComparisonAggregate_function/aggregate_function"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="typeSchemaDefinition" defaultFor="/">
+        <object href="../slo.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.1/@value/@keywordDefinition.1/@keySchemaPairs.1/@value/@keywordDefinition.0"/>
+      </sourceElements>
+      <targetElements name="eAttribute">
+        <object href="sloOpt.ecore#//ComparisonCompare_with/compare_with"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="typeSchemaDefinition" defaultFor="/">
+        <object href="../slo.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.1/@value/@keywordDefinition.1/@keySchemaPairs.2/@value/@keywordDefinition.0"/>
+      </sourceElements>
+      <targetElements name="eAttribute">
+        <object href="sloOpt.ecore#//ComparisonInclude_result_with_score/include_result_with_score"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="typeSchemaDefinition" defaultFor="/">
+        <object href="../slo.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.1/@value/@keywordDefinition.1/@keySchemaPairs.3/@value/@keywordDefinition.0"/>
+      </sourceElements>
+      <targetElements name="eAttribute">
+        <object href="sloOpt.ecore#//ComparisonNumber_of_comparison_results/number_of_comparison_results"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="typeSchemaDefinition" defaultFor="/">
+        <object href="../slo.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.2/@value/@keywordDefinition.1/@keySchemaPairs.0/@value/@keywordDefinition.0"/>
+      </sourceElements>
+      <targetElements name="eAttribute">
+        <object href="sloOpt.ecore#//ObjectiveKey_sli/key_sli"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="typeSchemaDefinition" defaultFor="/">
+        <object href="../slo.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.2/@value/@keywordDefinition.1/@keySchemaPairs.2/@value/@keywordDefinition.0"/>
+      </sourceElements>
+      <targetElements name="eAttribute">
+        <object href="sloOpt.ecore#//ObjectiveSli/sli"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="typeSchemaDefinition" defaultFor="/">
+        <object href="../slo.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.2/@value/@keywordDefinition.1/@keySchemaPairs.3/@value/@keywordDefinition.0"/>
+      </sourceElements>
+      <targetElements name="eAttribute">
+        <object href="sloOpt.ecore#//ObjectiveDisplayName/displayName"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="typeSchemaDefinition" defaultFor="/">
+        <object href="../slo.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.2/@value/@keywordDefinition.1/@keySchemaPairs.5/@value/@keywordDefinition.0"/>
+      </sourceElements>
+      <targetElements name="eAttribute">
+        <object href="sloOpt.ecore#//ObjectiveWeight/weight"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="typeSchemaDefinition" defaultFor="/">
+        <object href="../slo.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.3/@value/@keywordDefinition.1/@keySchemaPairs.0/@value/@keywordDefinition.0/@itemsAnyOf1/@keywordDefinition.0"/>
+      </sourceElements>
+      <targetElements name="eAttribute">
+        <object href="sloOpt.ecore#//SLICriteriaCriteriaItems/items"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="typeSchemaDefinition" defaultFor="/">
+        <object href="../slo.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.4/@value/@keywordDefinition.1/@keySchemaPairs.0/@value/@keywordDefinition.0"/>
+      </sourceElements>
+      <targetElements name="eAttribute">
+        <object href="sloOpt.ecore#//ScorePass/pass"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="typeSchemaDefinition" defaultFor="/">
+        <object href="../slo.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.4/@value/@keywordDefinition.1/@keySchemaPairs.1/@value/@keywordDefinition.0"/>
+      </sourceElements>
+      <targetElements name="eAttribute">
+        <object href="sloOpt.ecore#//ScoreWarning/warning"/>
+      </targetElements>
+    </links>
+  </rules>
+  <rules rule="mapDefaultAdditionalPropertiesEClass">
+    <links>
+      <sourceElements name="typeSchemaDefinition" defaultFor="/">
+        <object href="../slo.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.0/@value/@keywordDefinition.1/@keySchemaPairs.1/@value/@keywordDefinition.1"/>
+      </sourceElements>
+      <targetElements name="eReference">
+        <object href="sloOpt.ecore#//ServiceLevelObjectivesFilter/filter"/>
+      </targetElements>
+      <targetElements name="eClass">
+        <object href="sloOpt.ecore#//ServiceLevelObjectivesFilterAdditionalProperties"/>
+      </targetElements>
+      <targetElements name="key">
+        <object href="sloOpt.ecore#//ServiceLevelObjectivesFilterAdditionalProperties/key"/>
+      </targetElements>
+      <targetElements name="additionalProperties">
+        <object href="sloOpt.ecore#//ServiceLevelObjectivesFilterAdditionalProperties/additionalProperties"/>
+      </targetElements>
+    </links>
+  </rules>
+  <rules rule="createPropertiesEClass" uniqueSourceElements="//@rules.9/@links.0/@sourceElements.0 //@rules.9/@links.1/@sourceElements.0 //@rules.9/@links.2/@sourceElements.0 //@rules.9/@links.3/@sourceElements.0 //@rules.9/@links.4/@sourceElements.0 //@rules.9/@links.5/@sourceElements.0">
+    <links>
+      <sourceElements name="name" uniqueFor="//@rules.9"/>
+      <targetElements name="eClass">
+        <object href="sloOpt.ecore#//ServiceLevelObjectivesPropertiesAbstract"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="name" uniqueFor="//@rules.9"/>
+      <targetElements name="eClass">
+        <object href="sloOpt.ecore#//ComparisonPropertiesAbstract"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="name" uniqueFor="//@rules.9"/>
+      <targetElements name="eClass">
+        <object href="sloOpt.ecore#//ObjectivePropertiesAbstract"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="name" uniqueFor="//@rules.9"/>
+      <targetElements name="eClass">
+        <object href="sloOpt.ecore#//SLICriteriaPropertiesAbstract"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="name" uniqueFor="//@rules.9"/>
+      <targetElements name="eClass">
+        <object href="sloOpt.ecore#//ScorePropertiesAbstract"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="name" uniqueFor="//@rules.9"/>
+      <targetElements name="eClass">
+        <object href="sloOpt.ecore#//ServiceLevelObjectivesFilterPropertiesAbstract"/>
+      </targetElements>
+    </links>
+  </rules>
+  <rules rule="requiredInPropertiesToOcl">
+    <links>
+      <sourceElements name="requiredSchemaDefinition">
+        <object href="../slo.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.0/@value/@keywordDefinition.0"/>
+      </sourceElements>
+    </links>
+    <links>
+      <sourceElements name="requiredSchemaDefinition">
+        <object href="../slo.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.1/@value/@keywordDefinition.0"/>
+      </sourceElements>
+    </links>
+    <links>
+      <sourceElements name="requiredSchemaDefinition">
+        <object href="../slo.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.2/@value/@keywordDefinition.0"/>
+      </sourceElements>
+    </links>
+    <links>
+      <sourceElements name="requiredSchemaDefinition">
+        <object href="../slo.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.3/@value/@keywordDefinition.0"/>
+      </sourceElements>
+    </links>
+    <links>
+      <sourceElements name="requiredSchemaDefinition">
+        <object href="../slo.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.4/@value/@keywordDefinition.0"/>
+      </sourceElements>
+    </links>
+  </rules>
+  <rules rule="patternPropertiesRegexToOcl">
+    <links>
+      <sourceElements name="keySchemaPair">
+        <object href="../slo.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.0/@value/@keywordDefinition.1/@keySchemaPairs.1/@value/@keywordDefinition.0/@keySchemaPairs.0"/>
+      </sourceElements>
+    </links>
+  </rules>
+</trace:TraceLinkSet>

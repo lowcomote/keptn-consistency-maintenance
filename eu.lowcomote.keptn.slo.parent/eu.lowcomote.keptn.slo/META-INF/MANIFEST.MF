@@ -1,0 +1,29 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: eu.lowcomote.keptn.slo
+Bundle-ManifestVersion: 2
+Bundle-Name: eu.lowcomote.keptn.slo
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: eu.lowcomote.keptn.slo; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: eu.lowcomote.keptn.slo.model,
+ org.eclipse.xtext,
+ org.eclipse.xtext.xbase,
+ org.eclipse.equinox.common;bundle-version="3.5.0",
+ org.eclipse.ocl.xtext.completeocl;bundle-version="1.14.0",
+ org.eclipse.xtext.xbase.lib;bundle-version="2.14.0",
+ org.eclipse.xtext.util,
+ org.antlr.runtime;bundle-version="[3.2.0,3.2.1)",
+ jsonmetaschemaMM;bundle-version="1.0.0",
+ eu.lowcomote.keptn.sli2slo.model;bundle-version="1.0.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Export-Package: eu.lowcomote.keptn.slo.scoping,
+ eu.lowcomote.keptn.slo.serializer,
+ eu.lowcomote.keptn.slo.parser.antlr,
+ eu.lowcomote.keptn.slo.validation,
+ eu.lowcomote.keptn.slo.formatting2,
+ eu.lowcomote.keptn.slo.services,
+ eu.lowcomote.keptn.slo,
+ eu.lowcomote.keptn.slo.parser.antlr.internal,
+ eu.lowcomote.keptn.slo.generator
+Import-Package: org.apache.log4j

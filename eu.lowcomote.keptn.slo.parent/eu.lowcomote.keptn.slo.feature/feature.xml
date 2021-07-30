@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature id="eu.lowcomote.keptn.slo.feature"
+	label="Slo Feature "
+	version="1.0.0.qualifier">
+	<plugin
+			id="eu.lowcomote.keptn.slo"
+			download-size="0"
+			install-size="0"
+			version="0.0.0"
+			unpack="false"/>
+	<plugin
+			id="eu.lowcomote.keptn.slo.ide"
+			download-size="0"
+			install-size="0"
+			version="0.0.0"
+			unpack="false"/>
+	<plugin
+			id="eu.lowcomote.keptn.slo.ui"
+			download-size="0"
+			install-size="0"
+			version="0.0.0"
+			unpack="false"/>
+</feature>

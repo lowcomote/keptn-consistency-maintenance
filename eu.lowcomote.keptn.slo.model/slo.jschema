@@ -1,0 +1,131 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+  "$ref": "#/definitions/ServiceLevelObjectives",
+  "definitions": {
+	"ServiceLevelObjectives": {
+	  "required": [
+	    "comparison",
+	    "objectives",
+	    "spec_version",
+	    "total_score"
+	  ],
+	  "properties": {
+	    "comparison": {
+	      "$ref": "#/definitions/Comparison"
+	    },
+	    "filter": {
+	      "patternProperties": {
+	        ".*": {
+	          "type": "string"
+	        }
+	      },
+	      "type": "object"
+	    },
+	    "objectives": {
+	      "items": {
+	        "$ref": "#/definitions/Objective"
+	      },
+	      "type": "array"
+	    },
+	    "spec_version": {
+	      "type": "string"
+	    },
+	    "total_score": {
+	      "$ref": "#/definitions/Score"
+	    }
+	  },
+	  "additionalProperties": false,
+	  "type": "object"
+	},
+	
+	"Comparison": {
+	  "required": [
+	    "compare_with"
+	  ],
+	  "properties": {
+	    "aggregate_function": {
+	      "type": "string"
+	    },
+	    "compare_with": {
+	      "type": "string"
+	    },
+	    "include_result_with_score": {
+	      "type": "string"
+	    },
+	    "number_of_comparison_results": {
+	      "type": "integer"
+	    }
+	  },
+	  "additionalProperties": false,
+	  "type": "object"
+	},
+	
+	"Objective": {
+	  "required": [
+	    "pass",
+	    "sli"
+	  ],
+	  "properties": {
+	    "key_sli": {
+	      "type": "boolean"
+	    },
+	    "pass": {
+	      "items": {
+	        "$ref": "#/definitions/SLICriteria"
+	      },
+	      "type": "array"
+	    },
+	    "sli": {
+	      "type": "string"
+	    },
+	    "displayName": {
+	      "type": "string"
+	    },
+	    "warning": {
+	      "items": {
+	        "$ref": "#/definitions/SLICriteria"
+	      },
+	      "type": "array"
+	    },
+	    "weight": {
+	      "type": "integer"
+	    }
+	  },
+	  "additionalProperties": false,
+	  "type": "object"
+	},
+	
+	"SLICriteria": {
+	  "required": [
+	    "criteria"
+	  ],
+	  "properties": {
+	    "criteria": {
+	      "items": {
+	        "type": "string"
+	      },
+	      "type": "array"
+	    }
+	  },
+	  "additionalProperties": false,
+	  "type": "object"
+	},
+	
+	"Score": {
+	  "required": [
+	    "pass",
+	    "warning"
+	  ],
+	  "properties": {
+	    "pass": {
+	      "type": "string"
+	    },
+	    "warning": {
+	      "type": "string"
+	    }
+	  },
+	  "additionalProperties": false,
+	  "type": "object"
+		}
+	}
+}

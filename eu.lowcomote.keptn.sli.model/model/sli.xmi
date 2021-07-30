@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="ASCII"?>
+<trace:TraceLinkSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:trace="http://www.eclipse.org/m2m/atl/emftvm/2011/Trace" defaultSourceElements="//@rules.0/@links.0/@sourceElements.0 //@rules.1/@links.0/@sourceElements.0 //@rules.1/@links.1/@sourceElements.0 //@rules.2/@links.0/@sourceElements.0 //@rules.2/@links.1/@sourceElements.0 //@rules.3/@links.0/@sourceElements.0 //@rules.4/@links.0/@sourceElements.0 //@rules.4/@links.1/@sourceElements.0 //@rules.5/@links.0/@sourceElements.0 //@rules.6/@links.0/@sourceElements.0 //@rules.6/@links.1/@sourceElements.0">
+  <rules rule="JsonSchemaToEPackage">
+    <links>
+      <sourceElements name="jsonSchema" defaultFor="/">
+        <object href="../sli.jschema#/"/>
+      </sourceElements>
+      <targetElements name="ePackage">
+        <object href="sliOpt.ecore#/"/>
+      </targetElements>
+      <targetElements name="jsonGrammar">
+        <object href="sli.jsongrammar#/"/>
+      </targetElements>
+      <targetElements name="detailedGrammar">
+        <object href="sli.jsongrammar#//@detailedGrammar"/>
+      </targetElements>
+    </links>
+  </rules>
+  <rules rule="mapRootOrDefinitionsObjectSchemaToEClass">
+    <links>
+      <sourceElements name="objectSchema" defaultFor="/">
+        <object href="../sli.jschema#//@schema"/>
+      </sourceElements>
+      <targetElements name="eClass">
+        <object href="sliOpt.ecore#//SliRoot"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="objectSchema" defaultFor="/">
+        <object href="../sli.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.0/@value"/>
+      </sourceElements>
+      <targetElements name="eClass">
+        <object href="sliOpt.ecore#//ServiceLevelIndicators"/>
+      </targetElements>
+    </links>
+  </rules>
+  <rules rule="mapInPropertiesObjectSchemaToEClass">
+    <links>
+      <sourceElements name="schema" defaultFor="/">
+        <object href="../sli.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.0/@value/@keywordDefinition.1/@keySchemaPairs.0/@value"/>
+      </sourceElements>
+      <targetElements name="eClass">
+        <object href="sliOpt.ecore#//ServiceLevelIndicatorsIndicators"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="schema" defaultFor="/">
+        <object href="../sli.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.0/@value/@keywordDefinition.1/@keySchemaPairs.1/@value"/>
+      </sourceElements>
+      <targetElements name="eClass">
+        <object href="sliOpt.ecore#//ServiceLevelIndicatorsSpec_version"/>
+      </targetElements>
+    </links>
+  </rules>
+  <rules rule="mapObjectSchemaInPatternPropertiesEClass">
+    <links>
+      <sourceElements name="schema" defaultFor="/">
+        <object href="../sli.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.0/@value/@keywordDefinition.1/@keySchemaPairs.0/@value/@keywordDefinition.0/@keySchemaPairs.0/@value"/>
+      </sourceElements>
+      <targetElements name="eClass">
+        <object href="sliOpt.ecore#//ServiceLevelIndicatorsIndicatorsPatternProperties0"/>
+      </targetElements>
+      <targetElements name="key">
+        <object href="sliOpt.ecore#//ServiceLevelIndicatorsIndicatorsPatternProperties0/key"/>
+      </targetElements>
+    </links>
+  </rules>
+  <rules rule="createPropertiesContainment">
+    <links>
+      <sourceElements name="typeSchemaDefinition" defaultFor="/">
+        <object href="../sli.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.0/@value/@keywordDefinition.1/@keySchemaPairs.0/@value/@keywordDefinition.1"/>
+      </sourceElements>
+      <targetElements name="eReference">
+        <object href="sliOpt.ecore#//ServiceLevelIndicatorsIndicators/indicators"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="typeSchemaDefinition" defaultFor="/">
+        <object href="../sli.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.0/@value/@keywordDefinition.3"/>
+      </sourceElements>
+      <targetElements name="eReference">
+        <object href="sliOpt.ecore#//ServiceLevelIndicators/ServiceLevelIndicators"/>
+      </targetElements>
+    </links>
+  </rules>
+  <rules rule="mapRefSchemaToEReference">
+    <links>
+      <sourceElements name="refSchemaDefinition" defaultFor="/">
+        <object href="../sli.jschema#//@schema/@keywordDefinition.1"/>
+      </sourceElements>
+      <targetElements name="eReference">
+        <object href="sliOpt.ecore#//SliRoot/sliRoot"/>
+      </targetElements>
+    </links>
+  </rules>
+  <rules rule="createEAttributeSimpleScalar">
+    <links>
+      <sourceElements name="typeSchemaDefinition" defaultFor="/">
+        <object href="../sli.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.0/@value/@keywordDefinition.1/@keySchemaPairs.0/@value/@keywordDefinition.0/@keySchemaPairs.0/@value/@keywordDefinition.0"/>
+      </sourceElements>
+      <targetElements name="eAttribute">
+        <object href="sliOpt.ecore#//ServiceLevelIndicatorsIndicatorsPatternProperties0/patternProperties0"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="typeSchemaDefinition" defaultFor="/">
+        <object href="../sli.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.0/@value/@keywordDefinition.1/@keySchemaPairs.1/@value/@keywordDefinition.0"/>
+      </sourceElements>
+      <targetElements name="eAttribute">
+        <object href="sliOpt.ecore#//ServiceLevelIndicatorsSpec_version/spec_version"/>
+      </targetElements>
+    </links>
+  </rules>
+  <rules rule="createPropertiesEClass" uniqueSourceElements="//@rules.7/@links.0/@sourceElements.0 //@rules.7/@links.1/@sourceElements.0">
+    <links>
+      <sourceElements name="name" uniqueFor="//@rules.7"/>
+      <targetElements name="eClass">
+        <object href="sliOpt.ecore#//ServiceLevelIndicatorsPropertiesAbstract"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="name" uniqueFor="//@rules.7"/>
+      <targetElements name="eClass">
+        <object href="sliOpt.ecore#//ServiceLevelIndicatorsIndicatorsPropertiesAbstract"/>
+      </targetElements>
+    </links>
+  </rules>
+  <rules rule="requiredInPropertiesToOcl">
+    <links>
+      <sourceElements name="requiredSchemaDefinition">
+        <object href="../sli.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.0/@value/@keywordDefinition.0"/>
+      </sourceElements>
+    </links>
+  </rules>
+  <rules rule="patternPropertiesRegexToOcl">
+    <links>
+      <sourceElements name="keySchemaPair">
+        <object href="../sli.jschema#//@schema/@keywordDefinition.2/@keySchemaPairs.0/@value/@keywordDefinition.1/@keySchemaPairs.0/@value/@keywordDefinition.0/@keySchemaPairs.0"/>
+      </sourceElements>
+    </links>
+  </rules>
+</trace:TraceLinkSet>

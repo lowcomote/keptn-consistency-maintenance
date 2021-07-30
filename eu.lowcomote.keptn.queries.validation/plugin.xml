@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><plugin>
+  <extension id="validation.constraint.eu.lowcomote.keptn.queries.objectiveSliAndIndicatorKeyMustBeTheSame" point="org.eclipse.viatra.addon.validation.runtime.constraint">
+    <constraint class="eu.lowcomote.keptn.queries.ObjectiveSliAndIndicatorKeyMustBeTheSameConstraint0" name="eu.lowcomote.keptn.queries.objectiveSliAndIndicatorKeyMustBeTheSame">
+      <enabledForEditor editorId="org.eclipse.emf.ecore.presentation.ReflectiveEditorID"/>
+    </constraint>
+  </extension>
+</plugin>

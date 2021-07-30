@@ -1,0 +1,31 @@
+-- OCL contraints for /C:/Users/Benedek/Documents/git/keptn-consistency-maintenance/eu.lowcomote.keptn.sli.model/sli
+import 'http://jku.bise.at/sli'
+
+package sli
+
+	context sli::ServiceLevelIndicators 
+
+	inv ServiceLevelIndicatorsRequiredindicators ('ServiceLevelIndicators requires the property indicators'):
+	if  self.ServiceLevelIndicators->select(p|p.oclType()=sli::ServiceLevelIndicatorsIndicators)->size()>0
+	then true
+	else null
+	endif
+
+	context sli::ServiceLevelIndicators 
+
+	inv ServiceLevelIndicatorsRequiredspec_version ('ServiceLevelIndicators requires the property spec_version'):
+	if  self.ServiceLevelIndicators->select(p|p.oclType()=sli::ServiceLevelIndicatorsSpec_version)->size()>0
+	then true
+	else null
+	endif
+
+	context sli::ServiceLevelIndicatorsIndicatorsPatternProperties0 
+
+	inv ServiceLevelIndicatorsIndicatorsPatternProperties0patternProperties0Regex ('the key must match the regular expression .*'):
+	if  key.matches('.*')
+	then true
+	else null
+	endif
+
+endpackage
+

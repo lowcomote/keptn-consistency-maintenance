@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sli2slo:Sli2SloLinks
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:sli2slo="http://eu.lowcomote/keptn/sli2slo">
+  <links>
+    <sli href="example.sli#/"/>
+    <slo href="example.slo#/"/>
+  </links>
+</sli2slo:Sli2SloLinks>

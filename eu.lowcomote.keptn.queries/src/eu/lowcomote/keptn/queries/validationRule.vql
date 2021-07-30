@@ -1,0 +1,30 @@
+package eu.lowcomote.keptn.queries
+
+import "http://eu.lowcomote/keptn/sli2slo"
+import "http://jku.bise.at/sli"
+import "http://jku.bise.at/slo"
+
+@Constraint(
+	message = "Objective's SLI field must refer to an indicator with the same key.", 
+	severity = "error", 
+	key = {objective, sliField, sli, sliIndicator, property}, 
+	targetEditorId = "org.eclipse.emf.ecore.presentation.ReflectiveEditorID"
+)
+pattern objectiveSliAndIndicatorKeyMustBeTheSame(objective: Objective, sli: java String, sliField: ObjectiveSli, sliIndicator: ServiceLevelIndicatorsIndicators, property: ServiceLevelIndicatorsIndicatorsPatternProperties0){
+	Sli2SloLink.sli(link, sliRoot);
+	Sli2SloLink.slo(link, sloRoot);
+	
+	SloRoot.sloRoot.ServiceLevelObjectives(sloRoot, sloObjectivesFields);
+    ServiceLevelObjectivesObjectives.objectives.items(sloObjectivesFields, objective);
+    Objective.Objective(objective, sliField);
+    ObjectiveSli.sli(sliField, sli);
+    
+    SliRoot.sliRoot.ServiceLevelIndicators(sliRoot, sliIndicator);
+	ServiceLevelIndicatorsIndicators.indicators(sliIndicator, property);
+	neg find sliIndicatorHasProperty(sliIndicator, _, sli);
+}
+
+pattern sliIndicatorHasProperty(sliIndicator: ServiceLevelIndicatorsIndicators, properties: ServiceLevelIndicatorsIndicatorsPatternProperties0, key: java String){
+	ServiceLevelIndicatorsIndicators.indicators(sliIndicator, properties);
+  	ServiceLevelIndicatorsIndicatorsPatternProperties0.key(properties, key);
+}

@@ -1,0 +1,53 @@
+{
+   "spec_version": "1.0",
+   "filter": {
+      "mz_id": "4711",
+      "svc_id": "a14b-cd87-0d51"
+   },
+   "comparison": {
+      "compare_with": "several_results",
+      "include_result_with_score": "fail",
+      "number_of_comparison_results": 3,
+      "aggregate_function": "avg"
+   },
+   "objectives": [
+      {
+         "sli": "response_time_p95",
+         "pass": [
+            {
+               "criteria": [
+                  "<=+10%"
+               ]
+            }
+         ],
+         "warning": [
+            {
+               "criteria": [
+                  "<=800"
+               ]
+            }
+         ]
+      },
+       {
+         "sli": "response_time_p90",
+         "pass": [
+            {
+               "criteria": [
+                  "<600"
+               ]
+            }
+         ],
+         "warning": [
+            {
+               "criteria": [
+                  "<=700"
+               ]
+            }
+         ]
+      }
+   ],
+   "total_score": {
+      "pass": "90%",
+      "warning": "75%"
+   }
+}

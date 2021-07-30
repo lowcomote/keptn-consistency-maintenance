@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore">
+  <ecore:EPackage name="Shipyard" nsURI="http://jku.bise.at/Shipyard" nsPrefix="Shipyard">
+    <eClassifiers xsi:type="ecore:EClass" name="&quot;ServiceLevelObjectives&quot;">
+      <eAnnotations source="#/definitions/&quot;ServiceLevelObjectives&quot;"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="&quot;spec_version&quot;">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="&quot;filter&quot;" eType="/0/%22filter%22"
+          containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ArrayValue" eSuperTypes="/0/Value">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="value" upperBound="-1"
+          eType="/0/Value" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="BooleanValue" eSuperTypes="/0/Value">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="IntegerValue" eSuperTypes="/0/Value">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="NullValue" eSuperTypes="/0/Value"/>
+    <eClassifiers xsi:type="ecore:EClass" name="NumberValue" eSuperTypes="/0/Value">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="StringValue" eSuperTypes="/0/Value">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ObjectValue" eSuperTypes="/0/Value">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="keyvaluepair" upperBound="-1"
+          eType="/0/KeyValuePair" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Value" abstract="true"/>
+    <eClassifiers xsi:type="ecore:EClass" name="KeyValuePair">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" lowerBound="1">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="value" lowerBound="1"
+          eType="/0/Value" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="&quot;filter&quot;">
+      <eAnnotations source="#/definitions/&quot;ServiceLevelObjectives&quot;/properties/&quot;filter&quot;"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="additionalProperties"
+          upperBound="-1" eType="/0/KeyValuePair" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="&quot;Comparison&quot;">
+      <eAnnotations source="#/definitions/&quot;Comparison&quot;"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="&quot;aggregate_function&quot;">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="&quot;compare_with&quot;">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="&quot;include_result_with_score&quot;">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="&quot;number_of_comparison_results&quot;">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="&quot;Objective&quot;">
+      <eAnnotations source="#/definitions/&quot;Objective&quot;"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="&quot;sli&quot;">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="&quot;displayName&quot;">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="&quot;weight&quot;">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="&quot;key_sli&quot;">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="&quot;SLICriteria&quot;">
+      <eAnnotations source="#/definitions/&quot;SLICriteria&quot;"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="&quot;criteria&quot;"
+          upperBound="-1">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="&quot;Score&quot;">
+      <eAnnotations source="#/definitions/&quot;Score&quot;"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="&quot;pass&quot;">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="&quot;warning&quot;">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ecore:EAttribute name="&quot;.*&quot;">
+    <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </ecore:EAttribute>
+</xmi:XMI>

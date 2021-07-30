@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="slo" nsURI="http://jku.bise.at/slo" nsPrefix="slo">
+  <eClassifiers xsi:type="ecore:EClass" name="SloRoot">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sloRoot" lowerBound="1"
+        eType="#//ServiceLevelObjectives" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ServiceLevelObjectives">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ServiceLevelObjectives"
+        upperBound="-1" eType="#//ServiceLevelObjectivesPropertiesAbstract" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Comparison">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Comparison" upperBound="-1"
+        eType="#//ComparisonPropertiesAbstract" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Objective">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Objective" upperBound="-1"
+        eType="#//ObjectivePropertiesAbstract" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SLICriteria">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SLICriteria" upperBound="-1"
+        eType="#//SLICriteriaPropertiesAbstract" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Score">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Score" upperBound="-1"
+        eType="#//ScorePropertiesAbstract" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ServiceLevelObjectivesComparison" eSuperTypes="#//ServiceLevelObjectivesPropertiesAbstract">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="comparison" lowerBound="1"
+        eType="#//Comparison" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ServiceLevelObjectivesFilter" eSuperTypes="#//ServiceLevelObjectivesPropertiesAbstract">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="filter" upperBound="-1"
+        eType="#//ServiceLevelObjectivesFilterPropertiesAbstract" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ServiceLevelObjectivesObjectives" eSuperTypes="#//ServiceLevelObjectivesPropertiesAbstract">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="objectives" upperBound="-1"
+        eType="#//ServiceLevelObjectivesObjectivesItems" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ServiceLevelObjectivesSpec_version"
+      eSuperTypes="#//ServiceLevelObjectivesPropertiesAbstract">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="spec_version" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ServiceLevelObjectivesTotal_score" eSuperTypes="#//ServiceLevelObjectivesPropertiesAbstract">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="total_score" lowerBound="1"
+        eType="#//Score" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ComparisonAggregate_function" eSuperTypes="#//ComparisonPropertiesAbstract">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="aggregate_function" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ComparisonCompare_with" eSuperTypes="#//ComparisonPropertiesAbstract">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="compare_with" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ComparisonInclude_result_with_score"
+      eSuperTypes="#//ComparisonPropertiesAbstract">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="include_result_with_score"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ComparisonNumber_of_comparison_results"
+      eSuperTypes="#//ComparisonPropertiesAbstract">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="number_of_comparison_results"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ObjectiveKey_sli" eSuperTypes="#//ObjectivePropertiesAbstract">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="key_sli" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ObjectivePass" eSuperTypes="#//ObjectivePropertiesAbstract">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pass" upperBound="-1" eType="#//ObjectivePassItems"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ObjectiveSli" eSuperTypes="#//ObjectivePropertiesAbstract">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sli" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ObjectiveDisplayName" eSuperTypes="#//ObjectivePropertiesAbstract">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="displayName" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ObjectiveWarning" eSuperTypes="#//ObjectivePropertiesAbstract">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="warning" upperBound="-1"
+        eType="#//ObjectiveWarningItems" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ObjectiveWeight" eSuperTypes="#//ObjectivePropertiesAbstract">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="weight" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SLICriteriaCriteria" eSuperTypes="#//SLICriteriaPropertiesAbstract">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="criteria" upperBound="-1"
+        eType="#//SLICriteriaCriteriaItems" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ScorePass" eSuperTypes="#//ScorePropertiesAbstract">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pass" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ScoreWarning" eSuperTypes="#//ScorePropertiesAbstract">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="warning" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ServiceLevelObjectivesFilterPatternProperties0"
+      eSuperTypes="#//ServiceLevelObjectivesFilterPropertiesAbstract">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="patternProperties0" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ServiceLevelObjectivesObjectivesItems">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="items" lowerBound="1" eType="#//Objective"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ObjectivePassItems">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="items" lowerBound="1" eType="#//SLICriteria"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ObjectiveWarningItems">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="items" lowerBound="1" eType="#//SLICriteria"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SLICriteriaCriteriaItems">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="items" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ServiceLevelObjectivesFilterAdditionalProperties"
+      eSuperTypes="#//ServiceLevelObjectivesFilterPropertiesAbstract">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="additionalProperties" lowerBound="1"
+        eType="ecore:EClass http://at.jku.bise/jsonMetaschemaMM#//JsonDocument" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ServiceLevelObjectivesPropertiesAbstract"
+      abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ComparisonPropertiesAbstract" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ObjectivePropertiesAbstract" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SLICriteriaPropertiesAbstract" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ScorePropertiesAbstract" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ServiceLevelObjectivesFilterPropertiesAbstract"
+      abstract="true"/>
+</ecore:EPackage>

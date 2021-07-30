@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="ASCII"?>
+<jsongrammar:JsonGrammar xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:jsongrammar="http://at.jku.bise/jsongrammar/1.0" nsURI="http://jku.bise.at/slo">
+  <detailedGrammar>
+    <keywords xsi:type="ecore:EReference" href="sloOpt.ecore#//ServiceLevelObjectivesComparison/comparison"/>
+    <keywords xsi:type="ecore:EReference" href="sloOpt.ecore#//ServiceLevelObjectivesFilter/filter"/>
+    <keywords xsi:type="ecore:EReference" href="sloOpt.ecore#//ServiceLevelObjectivesObjectives/objectives"/>
+    <keywords xsi:type="ecore:EAttribute" href="sloOpt.ecore#//ServiceLevelObjectivesSpec_version/spec_version"/>
+    <keywords xsi:type="ecore:EReference" href="sloOpt.ecore#//ServiceLevelObjectivesTotal_score/total_score"/>
+    <keywords xsi:type="ecore:EAttribute" href="sloOpt.ecore#//ComparisonAggregate_function/aggregate_function"/>
+    <keywords xsi:type="ecore:EAttribute" href="sloOpt.ecore#//ComparisonCompare_with/compare_with"/>
+    <keywords xsi:type="ecore:EAttribute" href="sloOpt.ecore#//ComparisonInclude_result_with_score/include_result_with_score"/>
+    <keywords xsi:type="ecore:EAttribute" href="sloOpt.ecore#//ComparisonNumber_of_comparison_results/number_of_comparison_results"/>
+    <keywords xsi:type="ecore:EAttribute" href="sloOpt.ecore#//ObjectiveKey_sli/key_sli"/>
+    <keywords xsi:type="ecore:EReference" href="sloOpt.ecore#//ObjectivePass/pass"/>
+    <keywords xsi:type="ecore:EAttribute" href="sloOpt.ecore#//ObjectiveSli/sli"/>
+    <keywords xsi:type="ecore:EAttribute" href="sloOpt.ecore#//ObjectiveDisplayName/displayName"/>
+    <keywords xsi:type="ecore:EReference" href="sloOpt.ecore#//ObjectiveWarning/warning"/>
+    <keywords xsi:type="ecore:EAttribute" href="sloOpt.ecore#//ObjectiveWeight/weight"/>
+    <keywords xsi:type="ecore:EReference" href="sloOpt.ecore#//SLICriteriaCriteria/criteria"/>
+    <keywords xsi:type="ecore:EAttribute" href="sloOpt.ecore#//ScorePass/pass"/>
+    <keywords xsi:type="ecore:EAttribute" href="sloOpt.ecore#//ScoreWarning/warning"/>
+    <curlyBracesReferences href="sloOpt.ecore#//ServiceLevelObjectives/ServiceLevelObjectives"/>
+    <curlyBracesReferences href="sloOpt.ecore#//Comparison/Comparison"/>
+    <curlyBracesReferences href="sloOpt.ecore#//Objective/Objective"/>
+    <curlyBracesReferences href="sloOpt.ecore#//SLICriteria/SLICriteria"/>
+    <curlyBracesReferences href="sloOpt.ecore#//Score/Score"/>
+    <curlyBracesReferences href="sloOpt.ecore#//ServiceLevelObjectivesFilter/filter"/>
+    <bracketsReferences href="http://at.jku.bise/jsonMetaschemaMM#//ArrayValue/value"/>
+    <bracketsReferences href="sloOpt.ecore#//ServiceLevelObjectivesObjectives/objectives"/>
+    <bracketsReferences href="sloOpt.ecore#//ObjectivePass/pass"/>
+    <bracketsReferences href="sloOpt.ecore#//ObjectiveWarning/warning"/>
+    <bracketsReferences href="sloOpt.ecore#//SLICriteriaCriteria/criteria"/>
+    <keyValue href="http://at.jku.bise/jsonMetaschemaMM#//KeyValuePair/key"/>
+    <keyValue href="sloOpt.ecore#//ServiceLevelObjectivesFilterPatternProperties0/key"/>
+    <curlyBracesEClass href="http://at.jku.bise/jsonMetaschemaMM#//ObjectValue"/>
+  </detailedGrammar>
+</jsongrammar:JsonGrammar>

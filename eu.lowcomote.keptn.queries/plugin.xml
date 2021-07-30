@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><plugin>
+  <extension id="eu.lowcomote.keptn.queries.ValidationRule" point="org.eclipse.viatra.query.runtime.queryspecification">
+    <group group="org.eclipse.viatra.query.runtime.extensibility.SingletonExtensionFactory:eu.lowcomote.keptn.queries.ValidationRule" id="eu.lowcomote.keptn.queries.ValidationRule">
+      <query-specification fqn="eu.lowcomote.keptn.queries.objectiveSliAndIndicatorKeyMustBeTheSame"/>
+      <query-specification fqn="eu.lowcomote.keptn.queries.sliIndicatorHasProperty"/>
+    </group>
+  </extension>
+</plugin>
